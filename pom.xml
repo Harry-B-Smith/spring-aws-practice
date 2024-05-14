@@ -10,8 +10,8 @@
   <properties>
     <springframework.version>5.0.2.RELEASE</springframework.version>
 
-    <maven.compiler.source>1.17</maven.compiler.source>
-    <maven.compiler.target>1.17</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
   </properties>
 
   <url>http://maven.apache.org</url>
@@ -49,6 +49,14 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>springaws</finalName>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.11.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 </project>
